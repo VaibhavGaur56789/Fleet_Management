@@ -19,10 +19,10 @@
 </tr>
 <c:forEach items="${vehicle}" var="v">
 <tr>
-<td><c:out value="${v.getVehicleId() }"></c:out></td>
-<td><c:out value="${v.getCustomerId() }"></c:out></td>
-<td><c:out value="${v.getVehicleName() }"></c:out></td>
-<td><c:out value="${v.getCreateTs() }"></c:out></td>
+<td><c:out value="${v.getVehicle_id() }"></c:out></td>
+<td><c:out value="${v.getCustomer_id() }"></c:out></td>
+<td><c:out value="${v.getVehicle_name() }"></c:out></td>
+<td><c:out value="${v.getCreate_ts() }"></c:out></td>
 </tr>
 </c:forEach>
 </table>

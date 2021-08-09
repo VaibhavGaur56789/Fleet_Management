@@ -9,7 +9,7 @@
 <body>
 <form action = "insertVehicle" method ="post">
 
-Vehicle ID: <input type = "number" name = "vid"><br><br>
+
 Customer ID: <input type = "number" name = "cid"><br><br>
 Vehicle Name: <input type = "text" name = "vname"><br><br>
 Current Date: <input type = "date" name = "vdate"><br><br>
