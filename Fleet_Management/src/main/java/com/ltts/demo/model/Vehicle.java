@@ -19,10 +19,11 @@ public class Vehicle  {
 	
 	@Id
 	@GeneratedValue
-	private int vehicleId;
-	private int customerId;
-	private String vehicleName;
-	private LocalDate createTs;
+	private int vehicle_id;
+	//we use generated value and id to identify vehicle_id as auto incrementing and PK
+	private int customer_id;
+	private String vehicle_name;
+	private LocalDate create_ts;
 	
 	/*@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
@@ -32,55 +33,55 @@ public class Vehicle  {
 	private void onCreate() {
 		create_ts = new Date();
 	}*/
-
+    
 	public Vehicle() {
 		super();
 	}
 
-	public Vehicle(int vehicleId, int customerId, String vehicleName, LocalDate createTs) {
+	public Vehicle( int customer_id, String vehicle_name, LocalDate create_ts) {
 		super();
-		this.vehicleId = vehicleId;
-		this.customerId = customerId;
-		this.vehicleName = vehicleName;
-		this.createTs = createTs;
+		//this.vehicle_id = vehicle_id;
+		this.customer_id = customer_id;
+		this.vehicle_name = vehicle_name;
+		this.create_ts = create_ts;
 	}
 
-	public int getVehicleId() {
-		return vehicleId;
+	public int getVehicle_id() {
+		return vehicle_id;
 	}
 
-	public void setVehicleId(int vehicleId) {
-		this.vehicleId = vehicleId;
+	public void setVehicle_id(int vehicle_id) {
+		this.vehicle_id = vehicle_id;
 	}
 
-	public int getCustomerId() {
-		return customerId;
+	public int getCustomer_id() {
+		return customer_id;
 	}
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
 	}
 
-	public String getVehicleName() {
-		return vehicleName;
+	public String getVehicle_name() {
+		return vehicle_name;
 	}
 
-	public void setVehicleName(String vehicleName) {
-		this.vehicleName = vehicleName;
+	public void setVehicle_name(String vehicle_name) {
+		this.vehicle_name = vehicle_name;
 	}
 
-	public LocalDate getCreateTs() {
-		return createTs;
+	public LocalDate getCreate_ts() {
+		return create_ts;
 	}
 
-	public void setCreatrTs(LocalDate createTs) {
-		this.createTs = createTs;
+	public void setCreate_ts(LocalDate create_ts) {
+		this.create_ts = create_ts;
 	}
 
 	@Override
 	public String toString() {
-		return "Vehicle [vehicle_id=" + vehicleId + ", customer_id=" + customerId + ", vehicle_name=" + vehicleName
-				+ ", create_ts=" + createTs + "]";
+		return "Vehicle [vehicle_id=" + vehicle_id + ", customer_id=" + customer_id + ", vehicle_name=" + vehicle_name
+				+ ", create_ts=" + create_ts + "]";
 	}
 	
 	

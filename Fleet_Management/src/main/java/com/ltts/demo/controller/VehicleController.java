@@ -16,14 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ltts.demo.Dao.VehicleDao;
-import com.ltts.demo.Dao.impl.VehicleDaoImpl;
 import com.ltts.demo.model.Vehicle;
 
 @RestController
 public class VehicleController {
 
 	@Autowired
-	VehicleDaoImpl vd;
+	VehicleDao vd;
 	
 	@RequestMapping("/")
 	public ModelAndView firstMethod() {
@@ -40,15 +39,17 @@ public class VehicleController {
 		
 	ModelAndView mv = null;
 	
-	int vehicleId = Integer.parseInt(request.getParameter("vid"));
-	int customerId = Integer.parseInt(request.getParameter("cid"));
-	String vehicleName = request.getParameter("vname");
-	String createTs = request.getParameter("vdate");
+	/*int vehicle_id = Integer.parseInt(request.getParameter("vid"));There is no
+	need of this variable as we use autoincrement vehicle id will be incremented by
+	 1 every time we insert other deatils*/
+	int customer_id = Integer.parseInt(request.getParameter("cid"));
+	String vehicle_name = request.getParameter("vname");
+	String create_ts = request.getParameter("vdate");
 	
 	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-	  LocalDate localDate = LocalDate.parse(createTs, formatter);
+	  LocalDate localDate = LocalDate.parse(create_ts, formatter);
 	
-	Vehicle v = new Vehicle(vehicleId, customerId, vehicleName, localDate);
+	Vehicle v = new Vehicle( customer_id, vehicle_name, localDate);
 	boolean b = vd.insertVehicle(v);
 	
 	if(b == false) {
