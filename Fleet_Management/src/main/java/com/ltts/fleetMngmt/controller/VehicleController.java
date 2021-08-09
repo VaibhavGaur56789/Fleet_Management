@@ -1,4 +1,4 @@
-package com.ltts.demo.controller;
+package com.ltts.fleetMngmt.controller;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ltts.demo.Dao.VehicleDao;
-import com.ltts.demo.Dao.impl.VehicleDaoImpl;
-import com.ltts.demo.model.Vehicle;
+import com.ltts.fleetMngmt.dao.VehicleDao;
+import com.ltts.fleetMngmt.dao.impl.VehicleDaoImpl;
+import com.ltts.fleetMngmt.model.Vehicle;
 
 @RestController
 public class VehicleController {

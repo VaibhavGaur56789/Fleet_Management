@@ -1,4 +1,4 @@
-package com.ltts.demo.Dao.impl;
+package com.ltts.fleetMngmt.dao.impl;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import com.ltts.demo.Dao.VehicleDao;
-import com.ltts.demo.model.Vehicle;
+import com.ltts.fleetMngmt.dao.VehicleDao;
+import com.ltts.fleetMngmt.model.Vehicle;
 
 
 @Transactional
