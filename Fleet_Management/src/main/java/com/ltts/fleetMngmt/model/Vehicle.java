@@ -1,4 +1,4 @@
-package com.ltts.demo.model;
+package com.ltts.fleetMngmt.model;
 
 
 import java.time.LocalDate;
